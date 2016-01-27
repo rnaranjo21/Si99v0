@@ -117,9 +117,6 @@ text-align:center;
 }
 
 </style>
-
-
-
 <?php
 echo '<div  id="dvData" >';
 //llamado WSDL
@@ -230,35 +227,7 @@ echo '</table>';
  echo '</div>';
   ?> 
 </body style ="zoom:200;" >
-  <br>
-<center>
-<div id="map" style="width:800px; height:600px"></div>
-<br>
-<script type="text/javascript">
-function inicializaGoogleMaps() {
-        // Coordenadas del centro de nuestro recuadro principal
-    var list=255;
-    var x =4.529271320353346;
-    var y = -74.12000161742401;
-    var mapOptions = {
-        zoom: 8,
-        center: new google.maps.LatLng(x, y),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-      var map = new google.maps.Map(document.getElementById("map"),mapOptions);
-     var markers = [] , i;
-     for(i=0; i<list; i++) {
-    latitude=[<?php echo $posi1?>];
- Longitude=[<?php echo $posi2?>];
-         myLatLng = new google.maps.LatLng(latitude[i],Longitude[i]);
-        markers[i]=new google.maps.Marker({
-            position: myLatLng,
-                     });
-                markers[i].setMap(map);
-            }
-     }
- </script>
-</center>
+ </center>
  <br>
  <footer>
   <br>
